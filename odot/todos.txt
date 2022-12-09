@@ -1,0 +1,6 @@
+cook
+clean
+clean
+fix
+cook
+move
