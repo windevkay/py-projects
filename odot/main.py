@@ -23,7 +23,7 @@ while True:
             print(f"{index + 1}- {item}")
 
     elif 'edit' in user_action:
-        index = int(input("Index of todo to edit: ")) - 1
+        index = int(user_action[5:]) - 1
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
@@ -34,7 +34,7 @@ while True:
             file.writelines(todos)
 
     elif 'complete' in user_action:
-        index = int(input("Index of todo to complete: ")) - 1
+        index = int(user_action[9:]) - 1
         with open('todos.txt', 'r') as file:
             todos = file.readlines()
 
@@ -49,5 +49,7 @@ while True:
 
     elif 'exit' in user_action:
         break
+    else:
+        print('Invalid Command')
 
 print("...exiting!")
